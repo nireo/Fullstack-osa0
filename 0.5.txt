@@ -1,0 +1,15 @@
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+palvelin->selain: Palvelin lähettää HTML tiedosto vastauksen
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: Palvelin lähettää CSS tiedosto vastauksen
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+palvelin->selain: Palvelin lähettää JS tiedosto vastauksen
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+palvelin->selain: Palvelin lähettää data.json tiedoston, jota JS tiedosto pyytää
+
+note over selain:
+sivu on latautunut onnistuneesti käyttäjälle
+end note

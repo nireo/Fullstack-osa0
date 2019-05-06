@@ -1,0 +1,37 @@
+note over selain:
+käyttäjä on tässä vaiheessa lähettänyt HTTP GET pyynnön
+kaikille tarpeellisille tiedostoille .css .html jne.
+end note
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+note over palvelin:
+palvelin lukee HTTP POST pyynnön
+ja lisää sisällön data.json tiedostoon
+end note
+
+# html
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/notes
+palvelin->selain: HTML-koodi
+
+# css
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+palvelin->selain: main.css
+
+# js
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+palvelin->selain: main.js
+
+# uusi data.json
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+note over palvelin
+päivitetty data.json tiedosto, joka sisältää
+uutta dataa, jonka käyttäjä lisäsi
+end note
+palvelin->selain: data.json [{"content": "content", "date": "date"}]
+
+note over selain:
+käyttäjä näkee saman sivun kuin alussa, mutta
+nyt se myös sisältää uuden talletetun tiedon
+end note
+
+
+

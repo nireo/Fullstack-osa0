@@ -1,0 +1,5 @@
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+note over selain:
+tämä eroaa normaalista siten, että 
+ei tarvita, muita pyyntöjä kuin tämän yhden post pyynnön
+end note
